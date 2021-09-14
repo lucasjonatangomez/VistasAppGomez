@@ -1,10 +1,14 @@
 import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
 
-import { DETAILS } from '../data/servicesDetails';
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 export default function ServiceDetailScreen({ route }) {
-  const item = DETAILS.find(item => item.id === route.params.productID);
+
+  const detailID = useSelector(state => state.details.selectedID);
+  const details = useSelector(state => state.details.list);
+  const item = details.find(item => item.id === detailID);
+  
   return (
     <View style={styles.container}>
       <Image style={styles.logoService} source={item.img} />

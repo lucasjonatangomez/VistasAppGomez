@@ -1,14 +1,22 @@
-import { DETAILS } from '../data/servicesDetails';
+import React, { useEffect } from 'react';
+import { filterDetails, selectDetail } from '../store/actions/detail.actions';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { FlatList } from 'react-native';
-import React from 'react';
 import ServiceItem from '../components/ServiceItem';
 
-export default function CategoryServiceScreen({ navigation, route }) {
-  const details = DETAILS.filter(detail => detail.category === route.params.categoryID);
+export default function CategoryServiceScreen({ navigation }) {
+  const dispatch = useDispatch();
+  const categoryID = useSelector(state => state.categories.selectedID);
+  const details = useSelector(state => state.details.filteredDetails);
+
+  useEffect(() => {
+    dispatch(filterDetails(categoryID));
+  }, [categoryID]);
 
   const handleSelected = (item) => {
+    dispatch(selectDetail(item.id));
     navigation.navigate('Detail', {
-      productID: item.id,
       name: item.name,
     });
   } 
