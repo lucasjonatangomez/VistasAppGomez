@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
 
 import { FlatList } from 'react-native';
-import GridItem from '../components/GridItem';
+import GridItem from '../../components/GridItem';
 import React from 'react';
-import { selectCategory } from '../store/actions/category.actions';
+import { selectCategory } from '../../store/actions/category.actions';
 
 export default function CategoriesScreen({ navigation }) {
   const dispatch = useDispatch();

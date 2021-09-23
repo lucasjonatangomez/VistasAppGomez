@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import { filterDetails, selectDetail } from '../store/actions/detail.actions';
+import { filterDetails, selectDetail } from '../../store/actions/detail.actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { FlatList } from 'react-native';
-import ServiceItem from '../components/ServiceItem';
+import ServiceItem from '../../components/ServiceItem';
 
 export default function CategoryServiceScreen({ navigation }) {
   const dispatch = useDispatch();

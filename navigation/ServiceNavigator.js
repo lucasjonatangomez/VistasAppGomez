@@ -1,10 +1,10 @@
 import { COLORS } from '../constants/colors';
-import CategoriesScreen from '../screens/CategoriesScreen';
-import CategoryServiceScreen from '../screens/CategoryServiceScreen';
+import CategoriesScreen from '../screens/virtualrecharge/CategoriesScreen';
+import CategoryServiceScreen from '../screens/virtualrecharge/CategoryServiceScreen';
 import { NavigationContainer } from "@react-navigation/native";
 import { Platform } from 'react-native';
 import React from 'react';
-import ServiceDetailScreen from '../screens/ServiceDetailScreen';
+import ServiceDetailScreen from '../screens/virtualrecharge/ServiceDetailScreen';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 const Stack = createNativeStackNavigator();
