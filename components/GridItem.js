@@ -31,7 +31,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 6,
     margin: 15,
-    height: 160,
+    height: 130
   },
   container: {
     flex: 1,
@@ -44,7 +44,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     alignItems: 'center',
     padding: 7,
-    backgroundColor:'#FFFFFF'
+    backgroundColor:'#FFFFFF',
+    width: 120
   },
   title: {
     fontFamily: 'OpenSansBold',
@@ -52,8 +53,8 @@ const styles = StyleSheet.create({
     marginTop:10
   },
   logoService:{
-    width: 120, 
-    height: 120
+    width: 90, 
+    height: 90
   }
 });
 

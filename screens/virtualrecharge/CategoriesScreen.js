@@ -1,6 +1,6 @@
+import { Button, FlatList, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { FlatList } from 'react-native';
 import GridItem from '../../components/GridItem';
 import React from 'react';
 import { selectCategory } from '../../store/actions/category.actions';
@@ -21,11 +21,23 @@ export default function CategoriesScreen({ navigation }) {
   );
 
   return (
-    <FlatList
-      data={categories}
-      keyExtractor={item => item.id}
-      renderItem={renderGridItem}
-      numColumns={2}
-    />
+    <View>
+      <View style={{ flexDirection:'column' }}>
+                <Text>Empresa, servicio o impuesto</Text>
+              </View>
+              <View style={{ flexDirection:'column' }}>
+                <Button
+                  title="Buscar"
+                  color="#AAAAAA"
+                />
+      </View>
+
+      <FlatList
+        data={categories}
+        keyExtractor={item => item.id}
+        renderItem={renderGridItem}
+        numColumns={3}
+      />       
+     </View>    
   );
 }
