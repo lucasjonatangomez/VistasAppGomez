@@ -14,46 +14,47 @@ const TabNavigator = () => (
   <BottomTabs.Navigator
     screenOptions={{
       headerShown: false,
-      tabBarShowLabel: false,
+      tabBarShowLabel: true,
       tabBarStyle: { ...styles.shadow, ...styles.tabBar },
+      tabBarLabelStyle:{ ...styles.iconText },
     }}
     initialRouteName="Shop"
   >
 
     <BottomTabs.Screen
-      name="OrdersTab"
-      component={OrdersNavigator}
-      options={{
-        tabBarIcon: () => (
-          <View style={styles.item}>
-            <Ionicons name="md-receipt" size={24} color={COLORS.primary} />
-            <Text>Con Factura</Text>
-          </View>
-        )
-      }}
-    />
-
-    <BottomTabs.Screen
-      name="ShopTab"
+      name="Buscar Empresa"
       component={ShopNavigator}
       options={{
         tabBarIcon: () => (
           <View style={styles.item}>
             <Ionicons name="md-search" size={24} color={COLORS.primary} />
-            <Text>Sin Factura</Text>
+            {/* <Text style={styles.iconText}>Buscar Empresa</Text> */}
+          </View>
+        )
+      }}
+    />
+
+  <BottomTabs.Screen
+      name="Escanear"
+      component={OrdersNavigator}
+      options={{
+        tabBarIcon: () => (
+          <View style={styles.item}>
+            <Ionicons name="ios-camera-outline" size={24} color={COLORS.primary} />
+            {/* <Text style={styles.iconText}>Escanear</Text> */}
           </View>
         )
       }}
     />
 
     <BottomTabs.Screen
-      name="CartTab"
+      name="Carrito"
       component={CartNavigator}
       options={{
         tabBarIcon: () => (
           <View style={styles.item}>
             <Ionicons name="md-cart" size={24} color={COLORS.primary} />
-            <Text>Carrito</Text>
+            {/* <Text style={styles.iconText}>Carrito</Text> */}
           </View>
         )
       }}
@@ -76,13 +77,18 @@ const styles = StyleSheet.create({
     left: 20,
     right: 20,
     borderRadius: 15,
-    height: 90,
+    height: 90
   },
   item: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
+  iconText:{
+    fontSize:12,
+    marginTop:-15,
+    marginBottom:15
+  }
 })
 
 export default TabNavigator;
