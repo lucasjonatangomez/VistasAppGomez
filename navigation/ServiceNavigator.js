@@ -31,7 +31,7 @@ const ServiceNavigator = () => (
         name={ROUTES.HOME}
         component={CategoriesScreen}
         options={{
-          title: 'Ripsa Pagos - Carga Virtual',
+          title: 'Ripsa Pagos',
           headerStyle: { backgroundColor: COLORS.accent },
         }}
       />

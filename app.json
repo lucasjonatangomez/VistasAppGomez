@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "RipsaPagos",
+    "name": "Ripsa Pagos",
     "slug": "RipsaPagos",
     "version": "1.0.0",
     "platforms":["ios","android"],
@@ -18,13 +18,22 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier":"com.ripsa.app",
+      "buildNumber":"1.0.0"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package":"com.ripsa.app",
+      "versionCode":1,
+      "permissions":[
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+
     },
     "web": {
       "favicon": "./assets/favicon.png"

@@ -29,7 +29,7 @@ const VirtualRechargeNavigator = () => (
       name={ROUTES.HOME}
       component={CategoriesScreen}
       options={{
-        title: 'Carga Virtual',
+        title: 'Buscar Servicio',
       }}
     />
     <Stack.Screen

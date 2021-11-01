@@ -1,5 +1,4 @@
 import { ActivityIndicator, FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { confirmCart, removeItem } from '../../store/actions/cart.actions';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { COLORS } from '../../constants/colors';
@@ -8,13 +7,12 @@ import React from 'react';
 
 const CartScreen = () => {
    const dispatch = useDispatch();
-   const items = useSelector(state => state.cart.items);
-   const total = useSelector(state => state.cart.total);
-   const status = useSelector(state => state.cart.status);
+   const items = null;
+   const total = 0;
+   const status = null;
    const userId = useSelector(state => 1);
 
    const handlerDeleteItem = (id) => dispatch(removeItem(id));
-   const handlerConfirmCart = () => dispatch(confirmCart(items, userId));
 
    const renderItem = (data) => (
      <CartItem item={data.item} onDelete={handlerDeleteItem} />
@@ -38,7 +36,7 @@ const CartScreen = () => {
             />
          )
          : (
-            <TouchableOpacity style={styles.confirm} onPress={handlerConfirmCart}>
+            <TouchableOpacity style={styles.confirm}>
               <Text>Confirmar</Text>
               <View style={styles.total}>
                 <Text style={styles.text}>Total</Text>

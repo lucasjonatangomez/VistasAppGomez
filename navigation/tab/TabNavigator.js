@@ -22,7 +22,7 @@ const TabNavigator = () => (
   >
 
     <BottomTabs.Screen
-      name="Buscar Empresa"
+      name="Buscar Servicio"
       component={ShopNavigator}
       options={{
         tabBarIcon: () => (
